@@ -13,6 +13,11 @@ package com.xgr.wechatpay.wxpay;
 
 import com.xgr.easypay.base.IPayInfo;
 
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 文 件 名: WXPayInfoImpli
  * 创 建 人: King
@@ -96,4 +101,38 @@ public class WXPayInfo implements IPayInfo {
         this.prepayId = prepayId;
     }
 
+    public void parseJson(String json) {
+        try {
+            JSONObject jsonObject = new JSONObject(json);
+            setAppId(jsonObject.optString("appId"));
+            setPartnerId(jsonObject.optString("partnerId"));
+            setPrepayId(jsonObject.optString("prepayId"));
+            setPackageValue(jsonObject.optString("packageValue"));
+            setNonceStr(jsonObject.optString("nonceStr"));
+            setTimestamp(jsonObject.optString("timeStamp"));
+            setSign(jsonObject.optString("sign"));
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void parseString(String str, String regex1, String regex2) {
+        try {
+            Map<String, String> map = new HashMap<>();
+            String[] strings = str.split(regex1);
+            for (String string : strings) {
+                String[] kv = string.split(regex2);
+                map.put(kv[0], kv[1]);
+            }
+            setAppId(map.get("appId"));
+            setPartnerId(map.get("partnerId"));
+            setPrepayId(map.get("prepayId"));
+            setPackageValue(map.get("packageValue"));
+            setNonceStr(map.get("nonceStr"));
+            setTimestamp(map.get("timeStamp"));
+            setSign(map.get("sign"));
+        } catch (Throwable e) {
+            e.printStackTrace();
+        }
+    }
 }

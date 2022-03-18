@@ -40,13 +40,13 @@ class MainActivity : AppCompatActivity() {
     fun wechat(view: View) {
         val wxPay = WXPay.getInstance()
         val wxPayInfo = WXPayInfo().apply {
+            this.appId = ""
+            this.partnerId = ""
+            this.prepayId = ""
+            this.packageValue = ""
+            this.nonceStr = ""
             this.timestamp = ""
             this.sign = ""
-            this.prepayId = ""
-            this.partnerId = ""
-            this.appId = ""
-            this.nonceStr = ""
-            this.packageValue = ""
         }
         EasyPay.pay(this, wxPay, wxPayInfo, object : IPayCallback {
             override fun success() {
