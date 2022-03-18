@@ -1,13 +1,13 @@
 /*
-******************************* Copyright (c)*********************************\
-**
-**                 (c) Copyright 2017, King, china
-**                          All Rights Reserved
-**                                
-**                              By(King)
-**                         
-**------------------------------------------------------------------------------
-*/
+ ******************************* Copyright (c)*********************************\
+ **
+ **                 (c) Copyright 2017, King, china
+ **                          All Rights Reserved
+ **
+ **                              By(King)
+ **
+ **------------------------------------------------------------------------------
+ */
 package com.xgr.wechatpay.wxpay;
 
 
@@ -34,9 +34,9 @@ public class WXPayInfo implements IPayInfo {
 
     private String sign;
     private String timestamp;
-    private String partnerid;
+    private String partnerId;
     private String packageValue;
-    private String appid;
+    private String appId;
     private String nonceStr;
     private String prepayId;
 
@@ -56,12 +56,12 @@ public class WXPayInfo implements IPayInfo {
         this.timestamp = timestamp;
     }
 
-    public String getPartnerid() {
-        return partnerid;
+    public String getPartnerId() {
+        return partnerId;
     }
 
-    public void setPartnerid(String partnerid) {
-        this.partnerid = partnerid;
+    public void setPartnerId(String partnerId) {
+        this.partnerId = partnerId;
     }
 
     public String getPackageValue() {
@@ -72,12 +72,12 @@ public class WXPayInfo implements IPayInfo {
         this.packageValue = packageValue;
     }
 
-    public String getAppid() {
-        return appid;
+    public String getAppId() {
+        return appId;
     }
 
-    public void setAppid(String appid) {
-        this.appid = appid;
+    public void setAppId(String appId) {
+        this.appId = appId;
     }
 
     public String getNonceStr() {

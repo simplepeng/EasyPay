@@ -45,8 +45,8 @@ class MainActivity : AppCompatActivity() {
             this.timestamp = ""
             this.sign = ""
             this.prepayId = ""
-            this.partnerid = ""
-            this.appid = ""
+            this.partnerId = ""
+            this.appId = ""
             this.nonceStr = ""
             this.packageValue = ""
         }
