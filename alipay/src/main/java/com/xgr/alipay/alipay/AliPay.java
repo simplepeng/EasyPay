@@ -13,6 +13,7 @@ package com.xgr.alipay.alipay;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
 
@@ -30,17 +31,17 @@ import java.util.Map;
  * 博   客: www.smilevenus.com
  * @see <a href="https://docs.open.alipay.com/204/">Des</a>
  */
-public class AliPay implements IPayStrategy<AlipayInfoImpli> {
+public class AliPay implements IPayStrategy<AlipayInfo> {
 
     private static final int SDK_PAY_FLAG = 6406;
     private Activity mActivity;
-    private AlipayInfoImpli alipayInfoImpli;
+    private AlipayInfo alipayInfo;
     private static IPayCallback sPayCallback;
 
     @Override
-    public void pay(Activity activity, AlipayInfoImpli payInfo, IPayCallback payCallback) {
+    public void pay(Activity activity, AlipayInfo payInfo, IPayCallback payCallback) {
         this.mActivity = activity;
-        this.alipayInfoImpli = payInfo;
+        this.alipayInfo = payInfo;
         sPayCallback = payCallback;
         Runnable payRunnable = new Runnable() {
             @Override
@@ -48,7 +49,7 @@ public class AliPay implements IPayStrategy<AlipayInfoImpli> {
                 // 构造PayTask 对象
                 PayTask alipay = new PayTask(mActivity);
                 // 调用支付接口，获取支付结果
-                Map<String,String> result = alipay.payV2(alipayInfoImpli.getOrderInfo(),true);
+                Map<String,String> result = alipay.payV2(alipayInfo.getOrderInfo(),true);
                 Message msg = new Message();
                 msg.what = SDK_PAY_FLAG;
                 msg.obj = result;
@@ -61,7 +62,7 @@ public class AliPay implements IPayStrategy<AlipayInfoImpli> {
     }
 
     @SuppressLint("HandlerLeak")
-    private static Handler mHandler = new Handler() {
+    private static Handler mHandler = new Handler(Looper.getMainLooper()) {
         @SuppressWarnings("unused")
         @Override
         public void handleMessage(Message msg) {

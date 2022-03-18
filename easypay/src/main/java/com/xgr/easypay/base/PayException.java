@@ -1,15 +1,15 @@
 package com.xgr.easypay.base;
 
 /*
-******************************* Copyright (c)*********************************\
-**
-**                 (c) Copyright 2017, King, china
-**                          All Rights Reserved
-**                                
-**                              By(King)
-**                         
-**------------------------------------------------------------------------------
-*/
+ ******************************* Copyright (c)*********************************\
+ **
+ **                 (c) Copyright 2017, King, china
+ **                          All Rights Reserved
+ **
+ **                              By(King)
+ **
+ **------------------------------------------------------------------------------
+ */
 public class PayException extends Exception {
     private int mCode;
 

@@ -21,7 +21,7 @@ import com.xgr.easypay.base.IPayInfo;
  * 博   客: www.smilevenus.com
  * 描述 ：包含支付宝支付类型和支付信息
  */
-public class AlipayInfoImpli implements IPayInfo {
+public class AlipayInfo implements IPayInfo {
 
     private String orderInfo;
 
