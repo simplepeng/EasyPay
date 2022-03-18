@@ -40,15 +40,14 @@ class MainActivity : AppCompatActivity() {
 
     fun wechat(view: View) {
         val wxPay = WXPay.getInstance()
-//        val wxInfo = NetHelper.KTJson.decodeFromString<WxPayInfo>(order.payStr)
         val wxPayInfo = WXPayInfo().apply {
-            this.timestamp = ""
-            this.sign = ""
-            this.prepayId = ""
-            this.partnerId = ""
-            this.appId = ""
-            this.nonceStr = ""
-            this.packageValue = ""
+            this.timestamp = "wx10724f17c841d9e5"
+            this.sign = "TtoCFrl9MxSXCf6n3YfmvJ8KBr4q8cWRO/aNYlXt87ZEGs0r2EBpAUY9vopNaM3iBFRU6xswAc7AM972n8lwWU2Os+6RJW2WIraHJdLRbzWcDzw2N2em6KIxXX/3nZr3nlBHxZcEFoSWD9w3SstddXDwtkxP/tpdFjvmvpEGhHr1B80NIOMHeoYjac+E2HzoehO8loQeCNgcXfZ7EWcZB5N2XdvdeU3fhxXHE6XEYqwDoH+YABbOeJiVk1OgbJIP/5G1UJrUlI0hBlhlqEiuDc8bpEE+/GEBPEmUgsTIGuP7teOgvYOXPjhzr9D3mT3442X+FJo2xyIaoHtbjJy9dw=="
+            this.prepayId = "wx18145141122715b482d36e3d07ec4a0000"
+            this.partnerId = "1613226412"
+            this.appId = "wx10724f17c841d9e5"
+            this.nonceStr = "04fe9228316d4a6e8068aed541c06bcb"
+            this.packageValue = "Sign=WXPay"
         }
         EasyPay.pay(this, wxPay, wxPayInfo, object : IPayCallback {
             override fun success() {
