@@ -30,10 +30,10 @@ import com.xgr.easypay.callback.IPayCallback;
  * 博   客: www.smilevenus.com
  * @see <a href="https://open.weixin.qq.com/cgi-bin/showdocument?action=dir_list&t=resource/res_list&verify=1&id=1417751808&token=&lang=zh_CN">Des</a>
  */
-public class WXPay implements IPayStrategy<WXPayInfoImpli> {
+public class WXPay implements IPayStrategy<WXPayInfo> {
 
     private static WXPay mWXPay;
-    private WXPayInfoImpli payInfoImpli;
+    private WXPayInfo payInfoImpli;
     private static IPayCallback sPayCallback;
     private IWXAPI mWXApi;
     private boolean initializated;
@@ -64,7 +64,7 @@ public class WXPay implements IPayStrategy<WXPayInfoImpli> {
     }
 
     @Override
-    public void pay(Activity activity, WXPayInfoImpli payInfo, IPayCallback payCallback) {
+    public void pay(Activity activity, WXPayInfo payInfo, IPayCallback payCallback) {
         this.payInfoImpli = payInfo;
         sPayCallback = payCallback;
 

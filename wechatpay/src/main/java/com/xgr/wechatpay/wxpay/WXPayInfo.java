@@ -21,7 +21,7 @@ import com.xgr.easypay.base.IPayInfo;
  * 博   客: www.smilevenus.com
  * 描述 ：
  */
-public class WXPayInfoImpli implements IPayInfo {
+public class WXPayInfo implements IPayInfo {
     /**
      * sign : ECE311C3DF76E009E6F37F05C350625F
      * timestamp : 1474886901
