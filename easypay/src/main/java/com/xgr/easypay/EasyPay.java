@@ -29,7 +29,7 @@ import com.xgr.easypay.callback.IPayCallback;
  */
 public class EasyPay {
 
-    public static <T extends IPayInfo> void pay(IPayStrategy<T> payWay, Activity mActivity, T payInfo, IPayCallback callback) {
+    public static <T extends IPayInfo> void pay(Activity mActivity, IPayStrategy<T> payWay, T payInfo, IPayCallback callback) {
         payWay.pay(mActivity, payInfo, callback);
     }
 
