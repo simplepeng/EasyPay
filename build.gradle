@@ -8,3 +8,9 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+ext {
+    compileSdk = 31
+    minSdk = 16
+    targetSdk = 31
+}
