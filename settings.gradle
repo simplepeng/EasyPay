@@ -16,3 +16,4 @@ rootProject.name = "EasyPay"
 include ':app'
 include ':library'
 include ':easypay'
+include ':alipay'
