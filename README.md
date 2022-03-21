@@ -4,8 +4,10 @@ fork from [EasyPay](https://github.com/kingofglory/EasyPay)，做了一些优化
 
 ## 导入
 
-```groovy
+[![](https://jitpack.io/v/simplepeng/EasyPay.svg)](https://jitpack.io/#simplepeng/EasyPay)
 
+```groovy
+implementation 'com.github.simplepeng:EasyPay:v1.0.0'
 ```
 
 ## 使用
