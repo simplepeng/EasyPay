@@ -41,7 +41,9 @@ dependencies {
 
 //    implementation 'com.alipay.sdk:alipaysdk-android:15.8.08'
 //    implementation 'com.alipay.sdk:alipaysdk-android:+@aar'
+
 //    implementation 'com.tencent.mm.opensdk:wechat-sdk-android:+'
+//    implementation 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'
 
     implementation(project(":easypay"))
     implementation(project(":wechatpay"))
