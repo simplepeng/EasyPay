@@ -49,8 +49,9 @@ dependencies {
     implementation(project(":wechatpay"))
     implementation(project(":alipay"))
 
-//    implementation 'com.github.simplepeng.EasyPay:easypay:v1.0.0'
-//    implementation 'com.github.simplepeng.EasyPay:alipay:v1.0.0'
-//    implementation 'com.github.simplepeng.EasyPay:wechatpay:v1.0.0'
+//    def easyPayVersion = "v1.0.1"
+//    implementation "com.github.simplepeng.EasyPay:easypay:$easyPayVersion"
+//    implementation "com.github.simplepeng.EasyPay:alipay:$easyPayVersion"
+//    implementation "com.github.simplepeng.EasyPay:wechatpay:$easyPayVersion"
 }
 
