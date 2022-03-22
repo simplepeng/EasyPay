@@ -34,6 +34,6 @@ android {
 }
 
 dependencies {
-    compileOnly 'com.alipay.sdk:alipaysdk-android:+@aar'
     compileOnly(project(":easypay"))
+    compileOnly 'com.alipay.sdk:alipaysdk-android:+@aar'
 }

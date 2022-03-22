@@ -34,6 +34,6 @@ android {
 }
 
 dependencies {
-    compileOnly 'com.tencent.mm.opensdk:wechat-sdk-android:+'
     compileOnly(project(":easypay"))
+    compileOnly 'com.tencent.mm.opensdk:wechat-sdk-android:+'
 }
