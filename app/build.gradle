@@ -45,13 +45,13 @@ dependencies {
 //    implementation 'com.tencent.mm.opensdk:wechat-sdk-android:+'
 //    implementation 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.0'
 
-//    implementation(project(":easypay"))
-//    implementation(project(":wechatpay"))
-//    implementation(project(":alipay"))
+    implementation(project(":easypay"))
+    implementation(project(":wechatpay"))
+    implementation(project(":alipay"))
 
-    def easyPayVersion = "v1.0.2"
-    implementation "com.github.simplepeng.EasyPay:easypay:$easyPayVersion"
-    implementation "com.github.simplepeng.EasyPay:alipay:$easyPayVersion"
-    implementation "com.github.simplepeng.EasyPay:wechatpay:$easyPayVersion"
+//    def easyPayVersion = "v1.0.2"
+//    implementation "com.github.simplepeng.EasyPay:easypay:$easyPayVersion"
+//    implementation "com.github.simplepeng.EasyPay:alipay:$easyPayVersion"
+//    implementation "com.github.simplepeng.EasyPay:wechatpay:$easyPayVersion"
 }
 
