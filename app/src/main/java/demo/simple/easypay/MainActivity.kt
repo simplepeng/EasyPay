@@ -1,9 +1,9 @@
 package demo.simple.easypay
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.xgr.alipay.alipay.AliPay
 import com.xgr.alipay.alipay.AlipayInfo
 import com.xgr.easypay.EasyPay
